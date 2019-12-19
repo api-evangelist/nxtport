@@ -1,0 +1,156 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Vessel Stay API (live)",
+        "description": "Stay Numbers Port Of Antwerp API",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.nxtport.eu\/sa\/v1"
+    ],
+    "paths": {
+        "\/stays\/{imoNumber}": {
+            "get": {
+                "summary": "Get Stay",
+                "description": "Get a single stay by IMO number.",
+                "operationId": "StaysByImoNumber",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "imoNumber",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "exception": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "identifier": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "vesselInfo": {
+                "type": "object",
+                "properties": {
+                    "vesselName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "imoNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "countryNl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "countryEn": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vesselTypeFull": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vesselType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "flag": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "loa": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gbr": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stays": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "stay": {
+                "type": "object",
+                "properties": {
+                    "stayNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "agentCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "agentName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "eta": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ata": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "etd": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "atd": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "berthArrival": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "berthDeparture": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "origin": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "originFull": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "destination": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "destinationFull": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
