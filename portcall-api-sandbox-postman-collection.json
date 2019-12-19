@@ -1,0 +1,59 @@
+{
+    "id": "aeb741ea5bfbefa3e0c6505b0b59c5fc",
+    "name": "Portcall+ API (sandbox)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "7f033a11ff7af1ef0fce16ff9d9ea773",
+            "name": "Get Expected Vessels",
+            "url": "httpsapi-sb.nxtport.eu\/PortCallPlus\/v1\/vessels\/expected",
+            "description": "Get all the expected vessels of BEANR and BEZEE",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aeb741ea5bfbefa3e0c6505b0b59c5fc",
+            "rawModeData": ""
+        },
+        {
+            "id": "c192f9f936ba17f5ed8904ba9e398149",
+            "name": "Get Vessels In Port",
+            "url": "httpsapi-sb.nxtport.eu\/PortCallPlus\/v1\/vessels\/in-port",
+            "description": "Get all the in-port vessels of BEANR and BEZEE",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "aeb741ea5bfbefa3e0c6505b0b59c5fc",
+            "rawModeData": ""
+        }
+    ]
+}
