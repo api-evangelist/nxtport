@@ -1,0 +1,192 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Portcall+ API (sandbox)",
+        "description": "PortPlus API",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi-sb.nxtport.eu\/PortCallPlus\/v1"
+    ],
+    "paths": {
+        "\/vessels\/expected": {
+            "get": {
+                "summary": "Get Expected Vessels",
+                "description": "Get all the expected vessels of BEANR and BEZEE",
+                "operationId": "VesselsExpected",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/vessels\/in-port": {
+            "get": {
+                "summary": "Get Vessels In Port",
+                "description": "Get all the in-port vessels of BEANR and BEZEE",
+                "operationId": "VesselsInPort",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AgentDto": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ErrorDto": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "identifier": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LastCheckedDto": {
+                "type": "object",
+                "properties": {
+                    "lastChecked": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LocationDto": {
+                "type": "object",
+                "properties": {
+                    "actualTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "anchored": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "estimatedTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "locode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PortDto": {
+                "type": "object",
+                "properties": {
+                    "locode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TimeDto": {
+                "type": "object",
+                "properties": {
+                    "actualTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "estimatedTime": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "VesselDto": {
+                "type": "object",
+                "properties": {
+                    "callsign": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "flag": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gbr": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "imoNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "loa": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "mmsiNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tonnage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "VoyageDto": {
+                "type": "object",
+                "properties": {
+                    "passages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stayNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "voyageNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "voyageType": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
