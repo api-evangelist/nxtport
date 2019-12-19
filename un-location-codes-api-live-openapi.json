@@ -1,0 +1,313 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "UN Location Codes API (live)",
+        "description": "Available API's for the UN Location Codes",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.nxtport.eu\/unlocodes\/v1"
+    ],
+    "paths": {
+        "\/countries": {
+            "get": {
+                "summary": "Get Countries",
+                "description": "Get a list of all the countries. The API will return the complete list of the existing countries with their country name and 2-character country code in JSON format. The example output for a HTTP Status code 200 contains a subset of the possible outcome.",
+                "operationId": "GetCountries",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/countries\/{countryCode}": {
+            "get": {
+                "summary": "Get Countries Countrycode",
+                "description": "Get the details of 1 specific country, specified by the country code in the query parameter. Both the country name and country code are returned in a JSON object. The example response in case of HTTP Status Code 200 contains the result when requested for countryCode BE.",
+                "operationId": "GetCountry",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "description": "2-character country code"
+                    }
+                ]
+            }
+        },
+        "\/countries\/{countryCode}\/subdivisions": {
+            "get": {
+                "summary": "Get Countries Code Subdivisions",
+                "description": "Get a list of all the subdivisions of a certain country, specified by the country code in the query parameter. The example response contains a subset of the output when requested for BE.",
+                "operationId": "GetCountrySubdivisions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "description": "2-character country code"
+                    }
+                ]
+            }
+        },
+        "\/countries\/{countryCode}\/subdivisions\/{subdivisionCode}": {
+            "get": {
+                "summary": "Get Countries Country Code Subdivisions Code",
+                "description": "Get the details of 1 specific subdivision, based on the countryCode and subdivisionCode in the query parameters.",
+                "operationId": "GetCountrySubdivision",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "description": "2-character country code"
+                    },
+                    {
+                        "name": "subdivisionCode",
+                        "in": "path",
+                        "description": "3-character subdivision code"
+                    }
+                ]
+            }
+        },
+        "\/locations": {
+            "get": {
+                "summary": "Get Locations",
+                "description": "This api will return a (paged) list of locations that match the search parameters (query parameters) ordered by the name without diacritics.",
+                "operationId": "SearchLocations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "3-character location code"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "2-character country code"
+                    },
+                    {
+                        "name": "subdiv",
+                        "in": "query",
+                        "description": "3-character subdivision code"
+                    },
+                    {
+                        "name": "searchterm",
+                        "in": "query",
+                        "description": "Part of the name of the location without diacritics"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "the page number to allow paging (needs to be an integer > 0)"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "the page size to allow paging (needs to be an integer 0 < pagesize < 1000)"
+                    }
+                ]
+            }
+        },
+        "\/locations\/{latitude}\/{longitude}\/{radius}": {
+            "get": {
+                "summary": "Get Locations Latitude Longitude Radius",
+                "description": "This api will return locations in a certain radius of a point, ordered by distance , not necessarily in the same country",
+                "operationId": "LocationsGetinNeighbourhood",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "latitude",
+                        "in": "path",
+                        "description": "the latitude of the specified point"
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "path",
+                        "description": "the longitude of the specified point"
+                    },
+                    {
+                        "name": "radius",
+                        "in": "path",
+                        "description": "the radius in km (max 75km)"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "the page number to allow paging (needs to be an integer > 0)"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "the page size to allow paging (needs to be an integer 0 < pagesize < 1000)"
+                    }
+                ]
+            }
+        },
+        "\/locations\/{locode}": {
+            "get": {
+                "summary": "Get Locations Locode",
+                "description": "Get the details of 1 location based on the locode.",
+                "operationId": "LocationsGetByCountryAndLocode",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "locode",
+                        "in": "path",
+                        "description": "5-character location code (country code + location code)."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Country": {
+                "type": "object",
+                "properties": {
+                    "countryCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "countryName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Subdivision": {
+                "type": "object",
+                "properties": {
+                    "countryCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subdivisionCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subdivisionName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subdivisionType": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Geolocation": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Functionality": {
+                "type": "object",
+                "properties": {
+                    "isUnknown": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isPort": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isRailTerminal": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isRoadTerminal": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isAirport": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isPostalExchangeOffice": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "hasMultimodalFunction": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "hasFixedTransportFunction": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isBorderCrossing": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Exception": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "identifier": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Location": {
+                "type": "object",
+                "properties": {
+                    "change": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "locode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "nameWithoutDiacritics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subdiv": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "iata": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "remarks": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
