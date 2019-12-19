@@ -1,0 +1,292 @@
+{
+    "id": "13ca3e7b073ffd399dcd212092eb4cec",
+    "name": "UN Location Codes API (live)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "7ff7e8b14522d3723b04d42c916d3a00",
+            "name": "Get Countries",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries",
+            "description": "Get a list of all the countries. The API will return the complete list of the existing countries with their country name and 2-character country code in JSON format. The example output for a HTTP Status code 200 contains a subset of the possible outcome.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        },
+        {
+            "id": "afccbe363f5bbf2883ccf2fb588fe524",
+            "name": "Get Countries Countrycode",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries\/{countryCode}",
+            "description": "Get the details of 1 specific country, specified by the country code in the query parameter. Both the country name and country code are returned in a JSON object. The example response in case of HTTP Status Code 200 contains the result when requested for countryCode BE.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "countryCode",
+                    "description": "2-character country code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        },
+        {
+            "id": "167898206a6afd38528f92edd8c5af58",
+            "name": "Get Countries Code Subdivisions",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries\/{countryCode}\/subdivisions",
+            "description": "Get a list of all the subdivisions of a certain country, specified by the country code in the query parameter. The example response contains a subset of the output when requested for BE.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "countryCode",
+                    "description": "2-character country code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d93c366279fc045a15008c0e0da8ed7",
+            "name": "Get Countries Country Code Subdivisions Code",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries\/{countryCode}\/subdivisions\/{subdivisionCode}",
+            "description": "Get the details of 1 specific subdivision, based on the countryCode and subdivisionCode in the query parameters.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "countryCode",
+                    "description": "2-character country code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "subdivisionCode",
+                    "description": "3-character subdivision code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        },
+        {
+            "id": "8347a97a291ff1ec98c33f27a05aeb7a",
+            "name": "Get Locations",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/locations",
+            "description": "This api will return a (paged) list of locations that match the search parameters (query parameters) ordered by the name without diacritics.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "code",
+                    "description": "3-character location code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "2-character country code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "subdiv",
+                    "description": "3-character subdivision code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "searchterm",
+                    "description": "Part of the name of the location without diacritics",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "the page number to allow paging (needs to be an integer > 0)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "size",
+                    "description": "the page size to allow paging (needs to be an integer 0 < pagesize < 1000)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        },
+        {
+            "id": "b5216049c2f935a5b630f792ac80d84a",
+            "name": "Get Locations Latitude Longitude Radius",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/locations\/{latitude}\/{longitude}\/{radius}",
+            "description": "This api will return locations in a certain radius of a point, ordered by distance , not necessarily in the same country",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "latitude",
+                    "description": "the latitude of the specified point",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "longitude",
+                    "description": "the longitude of the specified point",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "radius",
+                    "description": "the radius in km (max 75km)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "the page number to allow paging (needs to be an integer > 0)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "size",
+                    "description": "the page size to allow paging (needs to be an integer 0 < pagesize < 1000)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        },
+        {
+            "id": "afb2f0acd2a819feea9e0b41cd7e2250",
+            "name": "Get Locations Locode",
+            "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/locations\/{locode}",
+            "description": "Get the details of 1 location based on the locode.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "locode",
+                    "description": "5-character location code (country code + location code).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "rawModeData": ""
+        }
+    ]
+}
