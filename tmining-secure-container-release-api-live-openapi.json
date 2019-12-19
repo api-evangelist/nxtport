@@ -1,0 +1,1030 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "T-mining Secure Container Release API (live)",
+        "description": "This API allows carriers, forwarders and transport companies to securely release full import containers on a terminal and to transfer this release to the other parties in the chain, up to the truck driver or the barge\/rail operator.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.nxtport.eu\/blockchain"
+    ],
+    "paths": {
+        "\/api\/v1\/releases\/": {
+            "post": {
+                "summary": "Create release",
+                "description": "Serves to create a Container together with its PickupRight that gets automatically transferred to the consignee.",
+                "operationId": "PostApiV1Releases",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/releases\/{id}": {
+            "delete": {
+                "summary": "Block",
+                "description": "Blocking a release is done by a delete. This will revoke the PickupRight from the consignee. The Container and its PickupRight are deleted. Afterwards it is still possible to release again.\n The following conditions apply for this to work:\n* the container must have been released, i.e. there must be a vallid PickupRight   for the Container\n* the PickupRight should not be transferred to another Organization than the one that got the relesase initially\n* the PickupRight should not yet be assigned (",
+                "operationId": "DeleteApiV1Releases",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/containers": {
+            "get": {
+                "summary": "List Containers",
+                "description": "Get all containers currently in the database. Only Containers accessible by the user will be reported.",
+                "operationId": "GetApiV1Containers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new Container",
+                "description": "Create a new container.\nIf all goes well, a 200 status code is returned.\nIf the create fails, a 500 status code is returned.",
+                "operationId": "PostApiV1Containers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/containers\/{id}\/events": {
+            "get": {
+                "summary": "Get container events",
+                "description": "Get the list of Events related to a container",
+                "operationId": "GetApiV1ContainersEvents",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/containers\/{id}\/release": {
+            "put": {
+                "summary": "Release",
+                "description": "Release a container to an organization.",
+                "operationId": "PutApiV1ContainersRelease",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickup_rights\/": {
+            "get": {
+                "summary": "List PickupRights",
+                "description": "Get all PickupRights that are assigned \/ transferred to the users's Organization.",
+                "operationId": "GetApiV1PickupRights",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickup_rights\/{id}\/request": {
+            "get": {
+                "summary": "Request",
+                "description": "When a driver needs to pickup a container, he should send a request to get\nauthorization for the pickup. This will return a **temporary pincode**.\nIf no authorization is given, http status 403 is returned",
+                "operationId": "GetApiV1PickupRightsRequest",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickup_rights\/{id}\/transfer": {
+            "put": {
+                "summary": "Transfer",
+                "description": "Transfer the PickupRight to another Organization (a subcontractor).",
+                "operationId": "PutApiV1PickupRightsTransfer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickup_rights\/{id}\/assign": {
+            "put": {
+                "summary": "Assign",
+                "description": "Assign the PickupRight to a truck driver.",
+                "operationId": "PutApiV1PickupRightsAssign",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickup_rights\/{id}\/revoke_assignment": {
+            "put": {
+                "summary": "Revoke Assignment",
+                "description": "Revoke the current PickupRight assignment. This must be used in case you did an assign of a PickupRight to a driver and you want to cancel this. This action is only possible as long as the PickupRight is not exercised.",
+                "operationId": "PutApiV1PickupRightsRevokeAssignment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickup_rights\/{id}\/revoke_transfer": {
+            "put": {
+                "summary": "Revoke Transfer",
+                "description": "Revoke the current PickupRight transfer. This must be used in case you did a transfer of a PickupRight to another Organization and you want to cancel this. This action is only possible as long as the PickupRight is not assigned.",
+                "operationId": "PutApiV1PickupRightsRevokeTransfer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/pickups": {
+            "post": {
+                "summary": "Create pickup",
+                "description": "When the driver has picked up the container, a request should be sent to the server to record (create) the pickup. The server will record the datetime of the pickup.",
+                "operationId": "PostApiV1Pickups",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/deliveries": {
+            "post": {
+                "summary": "Record delivery",
+                "description": "When the driver has delivered the container, a request should be sent to the server to record (create) the delivery. Note that a delivery is associated with a PickupRight, because the driver who gets a PickupRight, will automatically get a right to deliver the container. For that reason, the PickupRight must be reported.",
+                "operationId": "PostApiV1Deliveries",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/coordinates\/": {
+            "get": {
+                "summary": "Get Coordinates",
+                "description": "Get the coordinates of the location with the given name and type.",
+                "operationId": "GetApiV1Coordinates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name of the location"
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "type of the Location, can be 'Quay', 'Depot', 'Warehouse', 'InlandTerminal', 'Checkpoint'"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/coordinates": {
+            "get": {
+                "summary": "Get all coordinates",
+                "description": "Get the coordinates of all known locations.",
+                "operationId": "GetApiV1Coordinates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/locations": {
+            "get": {
+                "summary": "List",
+                "description": "List all Locations with their details. Locations have a type, name and the ISRS Locode.",
+                "operationId": "GetApiV1Locations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create",
+                "description": "Create a new Location",
+                "operationId": "PostApiV1Locations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/locations\/{id}": {
+            "get": {
+                "summary": "Details",
+                "description": "Get details of 1 location.",
+                "operationId": "GetApiV1Locations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "original id of the release as defined in the client system and passed during the creation."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/container_types": {
+            "get": {
+                "summary": "List",
+                "description": "List all ContainerTypes",
+                "operationId": "GetApiV1ContainerTypes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/organizations": {
+            "get": {
+                "summary": "List",
+                "description": "List all registered organizations.",
+                "operationId": "GetApiV1Organizations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Register organization",
+                "description": "Register an Organization with a name. The name must be unique, so if one registers an Organization with a name that is already in use, an error will occur.",
+                "operationId": "PostApiV1Organizations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/users": {
+            "get": {
+                "summary": "List",
+                "description": "List all users registered.",
+                "operationId": "GetApiV1Users",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Register user",
+                "description": "Register information of a user. Note that the \"real\" (human) user should have\nan account on the blockchain (upfront). This account is represented by an address on the chain, which is based on the public key of the user. Registering therefore means defining user **properties** like a username, which can then be used to refer to users in a more human-friendly way then by using the account addresses. User registration should be done by the user who owns an account on the chain. As a result of regis",
+                "operationId": "PostApiV1Users",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/events\/": {
+            "post": {
+                "summary": "Create an Event",
+                "description": "Used to create an event for a container at a specific location and time.\nEach event is defined by a type.\nCurrently a limited number of events (pickup and availability) are supported, but this may be extended with e.g. passage events.\nThere are 2 ways to refer to a Container: by means of its id as defined in the Blockchain (this requires recording these ids in your app), or by means of a combination of the blNumber and isoNumber. Similarly, locations can be specified in 2 ways: by means of their",
+                "operationId": "PostApiV1Events",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_token",
+                        "in": "query",
+                        "description": "authentication token of user making the request"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "GetCoordinatesResponse": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "latitude": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "GetAllCoordinatesResponse": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "latitude": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "locationType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "isrsLocode": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "operatingOrganizationId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateRequest": {
+                "type": "object",
+                "properties": {
+                    "locationType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "isrsLocode": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "operatingOrganizationId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "DetailsResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "locationType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "isrsLocode": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "operatingOrganizationId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "RegisterOrganizationRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListResponse8": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "RegisterUserRequest": {
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "surName": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListResponse11": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "surName": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "owner": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateAnEventRequest": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "isoNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "blNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "locationId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "pickupRightId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateReleaseRequest": {
+                "type": "object",
+                "properties": {
+                    "originalId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "isoNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "blNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "loadStatus": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "grossWeight": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "seals": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "portOfLoading": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "portOfDestination": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "placeOfDischarge": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerOwner": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "consignee": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "validFrom": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "validUntil": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "GetContainerEventsResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "locationId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "time": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ReleaseRequest": {
+                "type": "object",
+                "properties": {
+                    "organizationId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "validFrom": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "validUntil": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreateANewContainerRequest": {
+                "type": "object",
+                "properties": {
+                    "isoNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "blNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "loadStatus": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "grossWeight": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "seals": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "portOfLoading": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "portOfDestination": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "placeOfDischargeId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerOwnerId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListContainersResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "isoNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "blNumber": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "loadStatus": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "grossWeight": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "seals": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "portOfLoading": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "portOfDestination": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "placeOfDischargeId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerOwnerId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "RequestResponse": {
+                "type": "object",
+                "properties": {
+                    "temporaryPincode": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "temporaryPincodeValidUntil": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "TransferRequest": {
+                "type": "object",
+                "properties": {
+                    "transfereeId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "AssignRequest": {
+                "type": "object",
+                "properties": {
+                    "assigneeId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "ListPickuprightsResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "containerId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "transferrerId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "pickupLocationId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "createdAt": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "validFrom": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "validUntil": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "blocked": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "available": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "transfereeId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "assigneeId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "pickedUp": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "delivered": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "CreatePickupResponse": {
+                "type": "object",
+                "properties": {
+                    "pickupRightId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "occurredAt": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "RecordDeliveryResponse": {
+                "type": "object",
+                "properties": {
+                    "pickupRightId": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "occurredAt": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            }
+        }
+    }
+}
