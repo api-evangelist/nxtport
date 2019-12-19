@@ -1,0 +1,928 @@
+{
+    "id": "8fd37485408156a5f98fc2b2b6f6b5a6",
+    "name": "T-mining Secure Container Release API (live)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "1961e00a7e1b33ef1d928004e047162f",
+            "name": "Create release",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/releases\/",
+            "description": "Serves to create a Container together with its PickupRight that gets automatically transferred to the consignee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "42c6215a62e63878f998c683312076b5",
+            "name": "Block",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/releases\/{id}",
+            "description": "Blocking a release is done by a delete. This will revoke the PickupRight from the consignee. The Container and its PickupRight are deleted. Afterwards it is still possible to release again.\n The following conditions apply for this to work:\n* the container must have been released, i.e. there must be a vallid PickupRight   for the Container\n* the PickupRight should not be transferred to another Organization than the one that got the relesase initially\n* the PickupRight should not yet be assigned (",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "73386250466ef211e5dfc25ab83ca2ac",
+            "name": "List Containers",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/containers",
+            "description": "Get all containers currently in the database. Only Containers accessible by the user will be reported.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "95a0de4a2dbb472ce5b0f2971fee7476",
+            "name": "Create a new Container",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/containers",
+            "description": "Create a new container.\nIf all goes well, a 200 status code is returned.\nIf the create fails, a 500 status code is returned.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "09b65b45b7be7a3f5167e898131058b7",
+            "name": "Get container events",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/containers\/{id}\/events",
+            "description": "Get the list of Events related to a container",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "b0af6718466d5d8c74d73614638f8b2a",
+            "name": "Release",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/containers\/{id}\/release",
+            "description": "Release a container to an organization.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "a9158ec0b58187d7e145e8a0fbcebffa",
+            "name": "List PickupRights",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickup_rights\/",
+            "description": "Get all PickupRights that are assigned \/ transferred to the users's Organization.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "8fb75dd7a39efea4f2609a3bbfc50d64",
+            "name": "Request",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickup_rights\/{id}\/request",
+            "description": "When a driver needs to pickup a container, he should send a request to get\nauthorization for the pickup. This will return a **temporary pincode**.\nIf no authorization is given, http status 403 is returned",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "1738059105c0caa452821b6f3f0ad908",
+            "name": "Transfer",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickup_rights\/{id}\/transfer",
+            "description": "Transfer the PickupRight to another Organization (a subcontractor).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "271b1a72f95b70db0149b65a352b89c0",
+            "name": "Assign",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickup_rights\/{id}\/assign",
+            "description": "Assign the PickupRight to a truck driver.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ef7b9c3f932aa3470b7e4d382960c630",
+            "name": "Revoke Assignment",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickup_rights\/{id}\/revoke_assignment",
+            "description": "Revoke the current PickupRight assignment. This must be used in case you did an assign of a PickupRight to a driver and you want to cancel this. This action is only possible as long as the PickupRight is not exercised.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "56525b4b70b4090c7c45b2e01ac96a18",
+            "name": "Revoke Transfer",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickup_rights\/{id}\/revoke_transfer",
+            "description": "Revoke the current PickupRight transfer. This must be used in case you did a transfer of a PickupRight to another Organization and you want to cancel this. This action is only possible as long as the PickupRight is not assigned.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "94ef418a1768f6a3c64c0a7c5bcc772e",
+            "name": "Create pickup",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/pickups",
+            "description": "When the driver has picked up the container, a request should be sent to the server to record (create) the pickup. The server will record the datetime of the pickup.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "6387eecbe73778e25d0ded97f8b1d00c",
+            "name": "Record delivery",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/deliveries",
+            "description": "When the driver has delivered the container, a request should be sent to the server to record (create) the delivery. Note that a delivery is associated with a PickupRight, because the driver who gets a PickupRight, will automatically get a right to deliver the container. For that reason, the PickupRight must be reported.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ddbac29bf115d1b9824dc775873ffa8d",
+            "name": "Get Coordinates",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/coordinates\/",
+            "description": "Get the coordinates of the location with the given name and type.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "name of the location",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "type of the Location, can be 'Quay', 'Depot', 'Warehouse', 'InlandTerminal', 'Checkpoint'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "075390835cc41e695f771c3851ff72ca",
+            "name": "Get all coordinates",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/coordinates",
+            "description": "Get the coordinates of all known locations.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "e1e8159e4192055a8b1752a9e6c96f26",
+            "name": "List",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/locations",
+            "description": "List all Locations with their details. Locations have a type, name and the ISRS Locode.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "528c8026aae4cbe5fed89e15164ca6ca",
+            "name": "Create",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/locations",
+            "description": "Create a new Location",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "48ff913b4de5783986b702e92cd1b41f",
+            "name": "Details",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/locations\/{id}",
+            "description": "Get details of 1 location.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "original id of the release as defined in the client system and passed during the creation.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "b250e46fcbe01699bd862e09d8ff817f",
+            "name": "List",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/container_types",
+            "description": "List all ContainerTypes",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "d1c3fdd70d9c21487ff641d21b681483",
+            "name": "List",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/organizations",
+            "description": "List all registered organizations.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce9206d04447062dc5b3b04e1696bfdb",
+            "name": "Register organization",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/organizations",
+            "description": "Register an Organization with a name. The name must be unique, so if one registers an Organization with a name that is already in use, an error will occur.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "dae2634239cb3d7a42d6e090976326b1",
+            "name": "List",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/users",
+            "description": "List all users registered.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "472ffaf53e0880de0bf7bda0836e6fb7",
+            "name": "Register user",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/users",
+            "description": "Register information of a user. Note that the \"real\" (human) user should have\nan account on the blockchain (upfront). This account is represented by an address on the chain, which is based on the public key of the user. Registering therefore means defining user **properties** like a username, which can then be used to refer to users in a more human-friendly way then by using the account addresses. User registration should be done by the user who owns an account on the chain. As a result of regis",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        },
+        {
+            "id": "5219ca717e4efea408e7542e25ced470",
+            "name": "Create an Event",
+            "url": "httpsapi.nxtport.eu\/blockchain\/api\/v1\/events\/",
+            "description": "Used to create an event for a container at a specific location and time.\nEach event is defined by a type.\nCurrently a limited number of events (pickup and availability) are supported, but this may be extended with e.g. passage events.\nThere are 2 ways to refer to a Container: by means of its id as defined in the Blockchain (this requires recording these ids in your app), or by means of a combination of the blNumber and isoNumber. Similarly, locations can be specified in 2 ways: by means of their",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_token",
+                    "description": "authentication token of user making the request",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8fd37485408156a5f98fc2b2b6f6b5a6",
+            "rawModeData": ""
+        }
+    ]
+}
