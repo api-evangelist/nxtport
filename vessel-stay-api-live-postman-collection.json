@@ -1,0 +1,44 @@
+{
+    "id": "374df987067ec69343099234cf0ffbd1",
+    "name": "Vessel Stay API (live)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "dd5943980b7def762e29303885cdb7ed",
+            "name": "Get Stay",
+            "url": "httpsapi.nxtport.eu\/sa\/v1\/stays\/{imoNumber}",
+            "description": "Get a single stay by IMO number.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "imoNumber",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "374df987067ec69343099234cf0ffbd1",
+            "rawModeData": ""
+        }
+    ]
+}
