@@ -1,0 +1,156 @@
+{
+    "id": "8c52158dd8f1f5e3ff14cd23277fe095",
+    "name": "Bel Air API (staging)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "976c2893c5f23aecc30076ab51bd7aec",
+            "name": "Retrieving supported metrics",
+            "url": "httpsapi-stg.nxtport.eu\/belair\/v1\/metrics",
+            "description": "The platform allows you to retrieve supported metrics by sending a HTTP GET to \/metrics. \nThe string-values for the attribute id can be used as a metricId path parameter in the City Layer operations. \nThe attribute granularity indicates how fine grained temporal pages should be split up when querying individual sources (and can be ignored here).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8c52158dd8f1f5e3ff14cd23277fe095",
+            "rawModeData": ""
+        },
+        {
+            "id": "4b9c75a0bb81275683de9e627fd6cde8",
+            "name": "Retrieve available layers",
+            "url": "httpsapi-stg.nxtport.eu\/belair\/v1\/layers",
+            "description": "This operation lists the currently available city layers. \nThe returned strings can then be used as a layerId path parameter in the \/layers operations included in this API.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8c52158dd8f1f5e3ff14cd23277fe095",
+            "rawModeData": ""
+        },
+        {
+            "id": "712d110540b39a56235dc6c513a999da",
+            "name": "Retrieve the city layer data for the specified layer, metric and date.",
+            "url": "httpsapi-stg.nxtport.eu\/belair\/v1\/layers\/{layerId}\/{metricId}\/{date}",
+            "description": "This operation retrieves city layer data for the specified layer, metric and date combination. The date is passed in the following format: YYYYMMDD. The values for the layerId and metricId can be fetched from the \/layers and \/metrics operations.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "layerId",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "metricId",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8c52158dd8f1f5e3ff14cd23277fe095",
+            "rawModeData": ""
+        },
+        {
+            "id": "4b5cdf751475087e9d910cbcf76eb1d6",
+            "name": "Retrieve the city layer data for the specified layer, metric and date.",
+            "url": "httpsapi-stg.nxtport.eu\/belair\/v1\/layers\/{layerId}\/{metricId}\/{date}\/{hour}",
+            "description": "This operation retrieves city layer data for the specified layer, metric and date combination. The date is passed in the following format: YYYYMMDD. The values for the layerId and metricId can be fetched from the \/layers and \/metrics operations.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "layerId",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "metricId",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "hour",
+                    "description": "TODO",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "8c52158dd8f1f5e3ff14cd23277fe095",
+            "rawModeData": ""
+        }
+    ]
+}
