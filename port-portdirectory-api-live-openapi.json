@@ -1,0 +1,436 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Port+ Portdirectory API (live)",
+        "description": "Port Directory API",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.nxtport.eu\/portdirectory\/v1"
+    ],
+    "paths": {
+        "\/companies": {
+            "get": {
+                "summary": "Get Companies",
+                "description": "Get companies where name contains input.",
+                "operationId": "CompanyGetCompaniesOverviewContainingName",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Name of the company"
+                    }
+                ]
+            }
+        },
+        "\/companies\/{id}": {
+            "get": {
+                "summary": "Get Companies",
+                "description": "Get a company by its id.",
+                "operationId": "CompanyGetCompanyById",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Format - uuid. Id of the company"
+                    }
+                ]
+            }
+        },
+        "\/companies\/name\/{name}": {
+            "get": {
+                "summary": "Get Companies Name Name",
+                "description": "Get a company by its name.",
+                "operationId": "CompanyGetCompanyByName",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Name of the company"
+                    }
+                ]
+            }
+        },
+        "\/companies\/pcs\/{pcs}": {
+            "get": {
+                "summary": "Get Companies Pcs Pcs",
+                "description": "Get a company by its pcs code.",
+                "operationId": "CompanyGetCompanyByPcs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "pcs",
+                        "in": "path",
+                        "description": "Pcs code of the company"
+                    }
+                ]
+            }
+        },
+        "\/companies\/vat\/{vat}": {
+            "get": {
+                "summary": "Get Companies Vat Vat",
+                "description": "Get a company by its vat.",
+                "operationId": "CompanyGetCompanyByVat",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "vat",
+                        "in": "path",
+                        "description": "Vat of the company"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ActivityDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AddressDto": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "streetAndNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "zipCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AfterhourDto": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fax": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "functionTitle": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gsm": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CertificateDto": {
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "property": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CompanyDto": {
+                "type": "object",
+                "properties": {
+                    "activities": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "afterHours": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "certificates": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fax": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "financials": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "logistics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "managements": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "openingHours": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pcsCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "quayAndWarehouses": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sectors": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vat": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "waterClercks": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CompanyOverviewDto": {
+                "type": "object",
+                "properties": {
+                    "facilities": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pcsCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vat": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ErrorResult": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "identifier": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "FinancialDto": {
+                "type": "object",
+                "properties": {
+                    "bic": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "iban": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LastCheckedResult": {
+                "type": "object",
+                "properties": {
+                    "lastChecked": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LogisticDto": {
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "property": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ManagementDto": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "functionTitle": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OpeningHoursDto": {
+                "type": "object",
+                "properties": {
+                    "afternoon": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "closed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "day": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "forenoon": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "QuayAndWarehouseDto": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fax": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "function": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "quayNr": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "responsible": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "warehouse": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SectorDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "WaterClerckDto": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fax": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "functionTitle": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gsm": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
