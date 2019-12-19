@@ -1,0 +1,148 @@
+{
+    "id": "5fb9b56bc9dcc8916fec868473fd90f1",
+    "name": "NxtPort Consignment API (live)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "148a2f3452d9b1d24ddf645cbbf1694f",
+            "name": "Returns the file with corresponding blnumbers and staynumber.",
+            "url": "httpsapi.nxtport.eu\/Consignment\/v1\/nxtportdocument\/{blnumber}\/sn\/{stayNumber}",
+            "description": "Returns the file with corresponding blnumbers and staynumber..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "blnumber",
+                    "description": "blnumber",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "stayNumber",
+                    "description": "staynumber",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Ocp",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5fb9b56bc9dcc8916fec868473fd90f1",
+            "rawModeData": ""
+        },
+        {
+            "id": "f0aa3fded031e44d40ec8681ce9b824a",
+            "name": "Returns the file with corresponding blnumbers and containernumber.",
+            "url": "httpsapi.nxtport.eu\/Consignment\/v1\/nxtportdocument\/{blnumber}\/cn\/{containerNumber}",
+            "description": "Returns the file with corresponding blnumbers and containernumber..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "blnumber",
+                    "description": "blnumber",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "containerNumber",
+                    "description": "containernumber",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Ocp",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5fb9b56bc9dcc8916fec868473fd90f1",
+            "rawModeData": ""
+        },
+        {
+            "id": "761391da09b5b77a7e577851627a5147",
+            "name": "Returns the file with corresponding blnumbers and senderID.",
+            "url": "httpsapi.nxtport.eu\/Consignment\/v1\/nxtportdocument\/{blnumber}\/ag\/{agent}",
+            "description": "Returns the file with corresponding blnumbers and senderid..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "blnumber",
+                    "description": "blnumber",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "agent",
+                    "description": "agent",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Ocp",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5fb9b56bc9dcc8916fec868473fd90f1",
+            "rawModeData": ""
+        }
+    ]
+}
