@@ -1,0 +1,168 @@
+{
+    "id": "a5dc174af9f08b50dd774e57b6a74378",
+    "name": "Port+ Portdirectory API (live)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "15076b0cbeff4a443ba390c43cc65ffd",
+            "name": "Get Companies",
+            "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies",
+            "description": "Get companies where name contains input.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of the company",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "rawModeData": ""
+        },
+        {
+            "id": "d6f767e0da003a499ee8fdb62aa13d77",
+            "name": "Get Companies",
+            "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/{id}",
+            "description": "Get a company by its id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Format - uuid. Id of the company",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "rawModeData": ""
+        },
+        {
+            "id": "ffb7d7145c15b443bd746718e36cbcfd",
+            "name": "Get Companies Name Name",
+            "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/name\/{name}",
+            "description": "Get a company by its name.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "Name of the company",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "rawModeData": ""
+        },
+        {
+            "id": "c827808f51878d17e6a469701c8696a1",
+            "name": "Get Companies Pcs Pcs",
+            "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/pcs\/{pcs}",
+            "description": "Get a company by its pcs code.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "pcs",
+                    "description": "Pcs code of the company",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "rawModeData": ""
+        },
+        {
+            "id": "30170ccd4094f3d83b6fa8ab73fcdf8d",
+            "name": "Get Companies Vat Vat",
+            "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/vat\/{vat}",
+            "description": "Get a company by its vat.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "vat",
+                    "description": "Vat of the company",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "rawModeData": ""
+        }
+    ]
+}
