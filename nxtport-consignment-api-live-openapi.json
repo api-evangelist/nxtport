@@ -1,0 +1,393 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "NxtPort Consignment API (live)",
+        "description": "The ConsignmentInfo API provides access to the customs status of consignments submitted to customs using a CUSCAR message.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.nxtport.eu\/Consignment\/v1"
+    ],
+    "paths": {
+        "\/nxtportdocument\/{blnumber}\/sn\/{stayNumber}": {
+            "get": {
+                "summary": "Returns the file with corresponding blnumbers and staynumber.",
+                "description": "Returns the file with corresponding blnumbers and staynumber..",
+                "operationId": "NxtportdocumentByBlnumberSnByStayNumberGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blnumber",
+                        "in": "path",
+                        "description": "blnumber"
+                    },
+                    {
+                        "name": "stayNumber",
+                        "in": "path",
+                        "description": "staynumber"
+                    },
+                    {
+                        "name": "Ocp",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/nxtportdocument\/{blnumber}\/cn\/{containerNumber}": {
+            "get": {
+                "summary": "Returns the file with corresponding blnumbers and containernumber.",
+                "description": "Returns the file with corresponding blnumbers and containernumber..",
+                "operationId": "NxtportdocumentByBlnumberCnByContainerNumberGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blnumber",
+                        "in": "path",
+                        "description": "blnumber"
+                    },
+                    {
+                        "name": "containerNumber",
+                        "in": "path",
+                        "description": "containernumber"
+                    },
+                    {
+                        "name": "Ocp",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/nxtportdocument\/{blnumber}\/ag\/{agent}": {
+            "get": {
+                "summary": "Returns the file with corresponding blnumbers and senderID.",
+                "description": "Returns the file with corresponding blnumbers and senderid..",
+                "operationId": "NxtportdocumentByBlnumberAgByAgentGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blnumber",
+                        "in": "path",
+                        "description": "blnumber"
+                    },
+                    {
+                        "name": "agent",
+                        "in": "path",
+                        "description": "agent"
+                    },
+                    {
+                        "name": "Ocp",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ImportConsignmentData": {
+                "type": "object",
+                "properties": {
+                    "disclaimer": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "parties": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "equipmentInformation": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "goods": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "References": {
+                "type": "object",
+                "properties": {
+                    "stayNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "billOfLadingId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "imoNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "filingAgentCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sequenceNumber": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Measurements": {
+                "type": "object",
+                "properties": {
+                    "totalQuantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalQuantityUom": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalWeight": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalWeightUom": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "overshippedQuantity": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Party": {
+                "type": "object",
+                "properties": {
+                    "partyTypeCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "scac": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "eori": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "streetAndNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "postalCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "place": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "countryCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "unstructuredAddress": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "contacts": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Locations": {
+                "type": "object",
+                "properties": {
+                    "placeOfOrigin": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "placeOfDestination": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "placeOfLoading": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "placeOfDischarge": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "warehouse": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Equipment": {
+                "type": "object",
+                "properties": {
+                    "equipmentType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "containerNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizeAndType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "emptyFull": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serviceCode1": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "serviceCode2": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "grossWeight": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "grossWeightUom": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "seals": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Good": {
+                "type": "object",
+                "properties": {
+                    "sequenceNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "outerPackageType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "numberOfPackages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "goodsGrossWeight": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "goodsGrossWeightUom": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "customsStatus": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "relatedEquipmentInfo": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Status": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ParentDocument": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Contact": {
+                "type": "object",
+                "properties": {
+                    "role": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Seal": {
+                "type": "object",
+                "properties": {
+                    "sealPartyTypeCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "number": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "conditionCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sealType": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RelatedEquipment": {
+                "type": "object",
+                "properties": {
+                    "containerNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "equipmentQuantity": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
