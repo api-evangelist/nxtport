@@ -1,0 +1,44 @@
+{
+    "id": "71a2891a9fe3688c977f0b5d65db7452",
+    "name": "Big Belly API (staging)",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "0edf49ec4c3982fd8034f585e527ad2a",
+            "name": "Publish Device",
+            "url": "httpsapi-stg.nxtport.eu\/bigbelly\/v1\/devices",
+            "description": "Publish the fill level for all Big Belly devices.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "71a2891a9fe3688c977f0b5d65db7452",
+            "rawModeData": ""
+        }
+    ]
+}
