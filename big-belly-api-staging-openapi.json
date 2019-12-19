@@ -1,0 +1,91 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Big Belly API (staging)",
+        "description": "API for ingestion of fill level updates from smart containers. The project is part of the Antwerp Smart Zone initiative.",
+        "termsOfService": "https:\/\/www.nxtport.eu\/General-Terms-And-Conditions"
+    },
+    "servers": [
+        "httpsapi-stg.nxtport.eu\/bigbelly\/v1"
+    ],
+    "paths": {
+        "\/devices": {
+            "post": {
+                "summary": "Publish Device",
+                "description": "Publish the fill level for all Big Belly devices.",
+                "operationId": "PublishDevices",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Devices": {
+                "type": "object",
+                "properties": {
+                    "time": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "count": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "devices": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            },
+            "Device": {
+                "type": "object",
+                "properties": {
+                    "assets": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "subType": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "configurations": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "parameters": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "statuses": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "alarms": {
+                        "description": "",
+                        "type": "post"
+                    },
+                    "deviceId": {
+                        "description": "",
+                        "type": "post"
+                    }
+                }
+            }
+        }
+    }
+}
