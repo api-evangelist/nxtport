@@ -1,0 +1,189 @@
+{
+    "name": "NxtPort",
+    "description": "NxtPort opens the gates to the Port of the future. This project is a milestone in the digitalization of logistics and cargo.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+    "tags": [
+        "data",
+        "general data",
+        "have api",
+        "relative data",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/nxtport\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Portcall+ API (sandbox)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/portcall-api-sandbox-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/portcall-api-sandbox.json"
+                }
+            ]
+        },
+        {
+            "name": "NxtPort Consignment API (live)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/nxtport-consignment-api-live-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nxtport-consignment-api-live.json"
+                }
+            ]
+        },
+        {
+            "name": "T-mining Secure Container Release API (live)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/tmining-secure-container-release-api-live-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/tmining-secure-container-release-api-live.json"
+                }
+            ]
+        },
+        {
+            "name": "Port+ Portdirectory API (live)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/port-portdirectory-api-live-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/port-portdirectory-api-live.json"
+                }
+            ]
+        },
+        {
+            "name": "Bel Air API (staging)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/bel-air-api-staging-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/bel-air-api-staging.json"
+                }
+            ]
+        },
+        {
+            "name": "UN Location Codes API (live)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/un-location-codes-api-live-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/un-location-codes-api-live.json"
+                }
+            ]
+        },
+        {
+            "name": "Vessel Stay API (live)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/vessel-stay-api-live-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/vessel-stay-api-live.json"
+                }
+            ]
+        },
+        {
+            "name": "Big Belly API (staging)",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28835-www-nxtport-eu.jpg",
+            "humanURL": "https:\/\/www.nxtport.eu",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/big-belly-api-staging-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/big-belly-api-staging.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Email",
+            "url": "mail@nxtport.eu"
+        },
+        {
+            "type": "Email",
+            "url": "development@nxtport.eu"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@nxtport.eu"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/NxtPort"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/NxtPortNews"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.nxtport.eu"
+        }
+    ]
+}
