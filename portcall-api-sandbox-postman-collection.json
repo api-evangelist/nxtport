@@ -1,5 +1,5 @@
 {
-    "id": "aeb741ea5bfbefa3e0c6505b0b59c5fc",
+    "id": "430d59a8c7f147d75a118219e210be93",
     "name": "Portcall+ API (sandbox)",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "7f033a11ff7af1ef0fce16ff9d9ea773",
+            "id": "6c0ecdb52c9f93a07c73ba0fca090413",
             "name": "Get Expected Vessels",
             "url": "httpsapi-sb.nxtport.eu\/PortCallPlus\/v1\/vessels\/expected",
             "description": "Get all the expected vessels of BEANR and BEZEE",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aeb741ea5bfbefa3e0c6505b0b59c5fc",
+            "collectionId": "430d59a8c7f147d75a118219e210be93",
             "rawModeData": ""
         },
         {
-            "id": "c192f9f936ba17f5ed8904ba9e398149",
+            "id": "14fb94a711b45e5071fb80b1ea5b77b7",
             "name": "Get Vessels In Port",
             "url": "httpsapi-sb.nxtport.eu\/PortCallPlus\/v1\/vessels\/in-port",
             "description": "Get all the in-port vessels of BEANR and BEZEE",
@@ -52,7 +52,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "aeb741ea5bfbefa3e0c6505b0b59c5fc",
+            "collectionId": "430d59a8c7f147d75a118219e210be93",
             "rawModeData": ""
         }
     ]
