@@ -1,5 +1,5 @@
 {
-    "id": "374df987067ec69343099234cf0ffbd1",
+    "id": "c4b55da8dd1e974edc1b51e22cad08cd",
     "name": "Vessel Stay API (live)",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "dd5943980b7def762e29303885cdb7ed",
+            "id": "b6ffbb26b374d5edba81908f8532b491",
             "name": "Get Stay",
             "url": "httpsapi.nxtport.eu\/sa\/v1\/stays\/{imoNumber}",
             "description": "Get a single stay by IMO number.",
@@ -37,7 +37,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "374df987067ec69343099234cf0ffbd1",
+            "collectionId": "c4b55da8dd1e974edc1b51e22cad08cd",
             "rawModeData": ""
         }
     ]
