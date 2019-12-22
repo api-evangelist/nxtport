@@ -1,5 +1,5 @@
 {
-    "id": "5fb9b56bc9dcc8916fec868473fd90f1",
+    "id": "2eafd1066d7320c2ec4014033735a7c5",
     "name": "NxtPort Consignment API (live)",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "148a2f3452d9b1d24ddf645cbbf1694f",
+            "id": "77d8ac734e8ef2d1e639f0ee711c9e74",
             "name": "Returns the file with corresponding blnumbers and staynumber.",
             "url": "httpsapi.nxtport.eu\/Consignment\/v1\/nxtportdocument\/{blnumber}\/sn\/{stayNumber}",
             "description": "Returns the file with corresponding blnumbers and staynumber..",
@@ -51,11 +51,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5fb9b56bc9dcc8916fec868473fd90f1",
+            "collectionId": "2eafd1066d7320c2ec4014033735a7c5",
             "rawModeData": ""
         },
         {
-            "id": "f0aa3fded031e44d40ec8681ce9b824a",
+            "id": "236bc4581ef1ac8d708ff953fb775073",
             "name": "Returns the file with corresponding blnumbers and containernumber.",
             "url": "httpsapi.nxtport.eu\/Consignment\/v1\/nxtportdocument\/{blnumber}\/cn\/{containerNumber}",
             "description": "Returns the file with corresponding blnumbers and containernumber..",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5fb9b56bc9dcc8916fec868473fd90f1",
+            "collectionId": "2eafd1066d7320c2ec4014033735a7c5",
             "rawModeData": ""
         },
         {
-            "id": "761391da09b5b77a7e577851627a5147",
+            "id": "6803ace322d9a1f0196f30536f25a1ce",
             "name": "Returns the file with corresponding blnumbers and senderID.",
             "url": "httpsapi.nxtport.eu\/Consignment\/v1\/nxtportdocument\/{blnumber}\/ag\/{agent}",
             "description": "Returns the file with corresponding blnumbers and senderid..",
@@ -141,7 +141,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5fb9b56bc9dcc8916fec868473fd90f1",
+            "collectionId": "2eafd1066d7320c2ec4014033735a7c5",
             "rawModeData": ""
         }
     ]
