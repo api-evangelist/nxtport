@@ -1,5 +1,5 @@
 {
-    "id": "71a2891a9fe3688c977f0b5d65db7452",
+    "id": "f8f655afecc53f1569a10b2f2e522f3b",
     "name": "Big Belly API (staging)",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0edf49ec4c3982fd8034f585e527ad2a",
+            "id": "e200bd1afcb374517a3f599cd2a8d705",
             "name": "Publish Device",
             "url": "httpsapi-stg.nxtport.eu\/bigbelly\/v1\/devices",
             "description": "Publish the fill level for all Big Belly devices.",
@@ -37,7 +37,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "71a2891a9fe3688c977f0b5d65db7452",
+            "collectionId": "f8f655afecc53f1569a10b2f2e522f3b",
             "rawModeData": ""
         }
     ]
