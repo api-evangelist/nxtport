@@ -1,5 +1,5 @@
 {
-    "id": "13ca3e7b073ffd399dcd212092eb4cec",
+    "id": "78f2f1d3766568210168140bb2778c5c",
     "name": "UN Location Codes API (live)",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "7ff7e8b14522d3723b04d42c916d3a00",
+            "id": "d5244cd5db5c7edd193cea92ca19d198",
             "name": "Get Countries",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries",
             "description": "Get a list of all the countries. The API will return the complete list of the existing countries with their country name and 2-character country code in JSON format. The example output for a HTTP Status code 200 contains a subset of the possible outcome.",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         },
         {
-            "id": "afccbe363f5bbf2883ccf2fb588fe524",
+            "id": "7e1b79f412e20cdee63df3374e39c8e2",
             "name": "Get Countries Countrycode",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries\/{countryCode}",
             "description": "Get the details of 1 specific country, specified by the country code in the query parameter. Both the country name and country code are returned in a JSON object. The example response in case of HTTP Status Code 200 contains the result when requested for countryCode BE.",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         },
         {
-            "id": "167898206a6afd38528f92edd8c5af58",
+            "id": "df520a033fdae65997b4c6cc694664cb",
             "name": "Get Countries Code Subdivisions",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries\/{countryCode}\/subdivisions",
             "description": "Get a list of all the subdivisions of a certain country, specified by the country code in the query parameter. The example response contains a subset of the output when requested for BE.",
@@ -91,11 +91,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         },
         {
-            "id": "5d93c366279fc045a15008c0e0da8ed7",
+            "id": "058f89c4df32452d36851f8d240e216c",
             "name": "Get Countries Country Code Subdivisions Code",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/countries\/{countryCode}\/subdivisions\/{subdivisionCode}",
             "description": "Get the details of 1 specific subdivision, based on the countryCode and subdivisionCode in the query parameters.",
@@ -129,11 +129,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         },
         {
-            "id": "8347a97a291ff1ec98c33f27a05aeb7a",
+            "id": "7005d218f782dba07edcb5f77690d38e",
             "name": "Get Locations",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/locations",
             "description": "This api will return a (paged) list of locations that match the search parameters (query parameters) ordered by the name without diacritics.",
@@ -195,11 +195,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         },
         {
-            "id": "b5216049c2f935a5b630f792ac80d84a",
+            "id": "35ff0c07478c8a4a673385b3ffe34de3",
             "name": "Get Locations Latitude Longitude Radius",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/locations\/{latitude}\/{longitude}\/{radius}",
             "description": "This api will return locations in a certain radius of a point, ordered by distance , not necessarily in the same country",
@@ -254,11 +254,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         },
         {
-            "id": "afb2f0acd2a819feea9e0b41cd7e2250",
+            "id": "f308e1612e615094c78ab0661d108246",
             "name": "Get Locations Locode",
             "url": "httpsapi.nxtport.eu\/unlocodes\/v1\/locations\/{locode}",
             "description": "Get the details of 1 location based on the locode.",
@@ -285,7 +285,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13ca3e7b073ffd399dcd212092eb4cec",
+            "collectionId": "78f2f1d3766568210168140bb2778c5c",
             "rawModeData": ""
         }
     ]
