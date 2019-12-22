@@ -1,5 +1,5 @@
 {
-    "id": "a5dc174af9f08b50dd774e57b6a74378",
+    "id": "46c44d7a689a9ba674effa48eb8f3680",
     "name": "Port+ Portdirectory API (live)",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "15076b0cbeff4a443ba390c43cc65ffd",
+            "id": "bffbf9ff40aaa51f91c87dda55a2af66",
             "name": "Get Companies",
             "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies",
             "description": "Get companies where name contains input.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "collectionId": "46c44d7a689a9ba674effa48eb8f3680",
             "rawModeData": ""
         },
         {
-            "id": "d6f767e0da003a499ee8fdb62aa13d77",
+            "id": "96c35b2c755d129835d103ae51a08821",
             "name": "Get Companies",
             "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/{id}",
             "description": "Get a company by its id.",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "collectionId": "46c44d7a689a9ba674effa48eb8f3680",
             "rawModeData": ""
         },
         {
-            "id": "ffb7d7145c15b443bd746718e36cbcfd",
+            "id": "2177a53ec6b9c86a3e5c275aecd39585",
             "name": "Get Companies Name Name",
             "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/name\/{name}",
             "description": "Get a company by its name.",
@@ -99,11 +99,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "collectionId": "46c44d7a689a9ba674effa48eb8f3680",
             "rawModeData": ""
         },
         {
-            "id": "c827808f51878d17e6a469701c8696a1",
+            "id": "0aa55a1547ae9b4e747023bedc0a0474",
             "name": "Get Companies Pcs Pcs",
             "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/pcs\/{pcs}",
             "description": "Get a company by its pcs code.",
@@ -130,11 +130,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "collectionId": "46c44d7a689a9ba674effa48eb8f3680",
             "rawModeData": ""
         },
         {
-            "id": "30170ccd4094f3d83b6fa8ab73fcdf8d",
+            "id": "e159d4581b8c74f33c0f39c1302846ab",
             "name": "Get Companies Vat Vat",
             "url": "httpsapi.nxtport.eu\/portdirectory\/v1\/companies\/vat\/{vat}",
             "description": "Get a company by its vat.",
@@ -161,7 +161,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a5dc174af9f08b50dd774e57b6a74378",
+            "collectionId": "46c44d7a689a9ba674effa48eb8f3680",
             "rawModeData": ""
         }
     ]
